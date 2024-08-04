@@ -1,0 +1,384 @@
+:root{
+    --blue-background: #D8E2DC;
+    --litle-pink: #FFE5D9;
+    --medium-pink: #FFCAD4;
+    --dark-pink: #F4ACB7;
+    --purple: #9D8189;
+    --pink-hyper-dark: #744855;
+
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;    
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--blue-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Playwrite AR", cursive;
+    gap: 80px;
+}
+
+/* First Section */
+
+#hilove{
+    font-size: var(--h3-font-size);
+    color: var(--pink-hyper-dark);
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4.0rem;
+    margin-top: 120px;
+}
+
+.ri-heart-fill {
+    font-size: 40px;
+    color: red;
+
+}
+
+.typing {
+    border-right: 2px solid var(--pink-hyper-dark);
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+#btn-section-one{
+    width: 82px;
+    height: 48px;
+    border-radius: 16px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--pink-hyper-dark);
+    color: var(--blue-background);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+#btn-section-one:hover {
+    border: var(--dark-pink) solid 4.5px;
+    background-color: var(--blue-background);
+    color: var(--pink-hyper-dark);
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--pink-hyper-dark);
+    }
+}
+
+
+/* Animation line heart */
+
+svg {
+    width: 60%;
+}
+svg #line {
+  width: 100%;
+  fill: none;
+  stroke: var(--dark-pink);
+  stroke-width: 3.5;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
+  stroke-miterlimit: 4;
+
+  stroke-opacity: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: dash 3s linear infinite;
+}
+svg #point {
+  fill: none;
+  stroke: var(--dark-pink);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: .1;
+  stroke-opacity: 1;
+  stroke-dasharray: .0001, .9999;
+  stroke-dashoffset: 1;
+  animation: dash 3s linear infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1;
+  }
+  80% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Second Section */
+
+#first-steps{
+    font-size: var(--h2-font-size);
+    color: var(--pink-hyper-dark);
+    width: 70%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10.0rem;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1.6s ease-in-out, transform 0.6s ease-in-out;
+    margin-bottom: 40px;
+}
+
+#first-steps.show {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    transform: translateX(0);
+}
+#first-steps.show .photo-text {
+    transform: translateX(0);
+}
+.photo-text{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 75%;
+}
+
+
+.photo-text img {
+    width: 400px;
+}
+
+.photo-text p {
+    width: 420px;
+    top: 40px;
+}
+
+#nos {
+    transform: rotate(-8deg);
+}
+
+#amorzinho {
+    transform: rotate(8deg);
+}
+
+#mylove {
+    display: none;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+#mylove.show {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    transform: translateX(0);
+}
+#mylove.show .three-photos {
+    transform: translateX(0);
+}
+
+#mylove img {
+    width: 20%;
+}
+
+.three-photos {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#mylove p {
+    width: 50%;
+    font-size: var(--h2-font-size);
+    text-align: center;
+    color: var(--pink-hyper-dark);
+}
+
+#btn-section-two{
+    width: 82px;
+    height: 48px;
+    border-radius: 16px;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--pink-hyper-dark);
+    color: var(--blue-background);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: opacity 0.6s;
+}
+
+footer {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+footer .ri-heart-fill {
+    font-size: 25px;
+    color: red;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1680px){
+    #nos{
+        width: 40%;
+    }
+    #amorzinho{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1430px){
+    #nos{
+        width: 40%;
+    }
+    #amorzinho{
+        width: 40%;
+    }
+
+    #first-steps{
+        width: 100%;
+    }
+
+    #first-steps p{
+        width: 400px;
+        font-size: var(--h3-font-size);
+    }
+}
+@media screen and (max-width: 920px){
+    #first-steps{
+        width: 100%;
+    }
+    #first-steps p{
+        width: 200px;
+        font-size: var(--small-font-size);
+    }
+    #nos{
+        width: 200px;
+    }
+    #amorzinho{
+        width: 200px;
+    }
+}
+
+
+@media screen and (max-width: 620px){
+    #nos{
+        width: 180px;
+    }
+    #amorzinho{
+        width: 180px;
+    }
+    #first-steps{
+        width: 100%;
+        gap: 80px;
+    }
+    #first-steps p{
+        width: 225px;
+        font-size: var(--small-font-size);
+    }
+
+    #first-steps h1 {
+        font-size: var(--h2-font-size);
+    }
+
+    #typing-text-four{
+        font-size: var(--h3-font-size);
+    }
+
+    .three-photos {
+        width: 100%;
+    }
+
+    #mylove img {
+        width: 150px;
+    }
+
+    #mylove .block-text {
+        font-size: var(--h3-font-size);
+        width: 100%;
+    }
+
+    #mylove #loveyou {
+        width: 100%;
+    }
+
+    #mylove #happy-mounth {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 560px){
+    #first-steps p{
+        width: 180px;
+        font-size: 0.65rem;
+    }
+    footer {
+        height: 100px;
+    }
+
+    #mylove {
+        gap: 60px
+    }
+}
+
+@media screen and (max-width: 500px){
+    #nos{
+        width: 140px;
+    }
+    #hi-love svg{
+        width: 100%;
+    }
+    #amorzinho{
+        width: 140px;
+    }
+    #pt-one{
+        gap: 30px;
+    }
+    #pt-two {
+        gap: 30px;
+    }
+    #first-steps p{
+        width: 180px;
+        font-size: 0.55rem;
+        
+    }
+    #mylove .block-text {
+        font-size: var(--normal-font-size);
+        width: 100%;
+    }
+}
+
